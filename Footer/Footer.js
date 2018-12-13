@@ -2,19 +2,18 @@ import React, { Component } from 'react';
 
 export default class Footer extends Component {
     render() {
+        let resumeData = this.props.resumeData;
         return (
             <React.Fragment>
                 <footer>
                     <div className="row">
                     <div className="twelve columns">
                         <ul className="social-links">
-                        <li><a href="#"><i className="fa fa-facebook" /></a></li>
-                        <li><a href="#"><i className="fa fa-twitter" /></a></li>
-                        <li><a href="#"><i className="fa fa-google-plus" /></a></li>
-                        <li><a href="#"><i className="fa fa-linkedin" /></a></li>
-                        <li><a href="#"><i className="fa fa-instagram" /></a></li>
-                        <li><a href="#"><i className="fa fa-dribbble" /></a></li>
-                        <li><a href="#"><i className="fa fa-skype" /></a></li>
+                        <li><a href="mailto:crystal.contr@gmail.com"><i className="fa fa-google-plus" /></a></li>
+                        <li><a href={resumeData.linkedIn}><i className="fa fa-linkedin" /></a></li>
+                        <li><a href={resumeData.instagram}><i className="fa fa-instagram" /></a></li>
+                        <li><a href={resumeData.github}><i className="fa fa-github" /></a></li>
+                        <li><a href={resumeData.skype}><i className="fa fa-skype" /></a></li>
                         </ul>
                         <ul className="copyright">
                         <li>© Copyright 2019 CrystalCoding</li>

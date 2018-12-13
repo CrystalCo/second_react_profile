@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 export default class About extends Component {
   render() {
+    let resumeData = this.props.resumeData;
     return (
       <React.Fragment>
         <section id="about">
@@ -11,28 +12,37 @@ export default class About extends Component {
             </div>
             <div className="nine columns main-col">
               <h2>About Me</h2>
-              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
-                eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-                voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione
-                voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
-                sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-                Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.
+              <p>Two-time International Brazilian Jiu-Jitsu Gold Medalist whose fierce competitive drive 
+                is ever present in her personal and professional endeavors. Intrinsically motivated and 
+                dedicated to continuous personal and professional development. An analytical thinker who's 
+                pragmatic and logical in approach when faced with challenges but also has a deeply creative 
+                spirit that draws her toward classical music and the arts when leisure calls. Effective at 
+                multi-tasking and managing heavy work-loads as evidenced by her simultaneous pursuit of a 
+                graduate degree in Computer Science and Professional web development for her clients.
+                <br></br>
+                <br></br>
+                My experience as a freelancer has significantly sharpened my leadership abilities, drive, 
+                discipline, resourcefulness, and resiliency.  I utilize my resources, work with teams, and 
+                triple-check my code to ensure maximum efficiency and a user-friendly product for my clients.
+                </p>
+                
+                <h2>Current Project</h2>
+                <p>Working on a full stack web and mobile application for personalized gifts/wish lists using Django 
+                REST, Heroku, and React. Check it out on <a href="https://github.com/CrystalCo/Gift ">GitHub</a>.
               </p>
               <div className="row">
                 <div className="columns contact-details">
                   <h2>Contact Details</h2>
                   <p className="address">
-                    <span>Jonathan Doe</span><br />
-                    <span>1600 Amphitheatre Parkway<br />
-                      Mountain View, CA 94043 US
-                    </span><br />
-                    <span>(123)456-7890</span><br />
-                    <span>anyone@website.com</span>
+                    <span> {resumeData.name} </span><br />
+                    <span> {resumeData.location} </span> <br />
+                    <span> {resumeData.phone} </span><br />
+                    <span> <a href="mailto:crystal.contr@gmail.com" > {resumeData.email} </a> </span>
                   </p>
                 </div>
                 <div className="columns download">
                   <p>
-                    <a href="#" className="button"><i className="fa fa-download" />Download Resume</a>
+                    <a href="data/Contreras Developer Resume.pdf" className="button"><i className="fa fa-download" />Download Resume</a>
                   </p>
                 </div>
               </div> {/* end row */}
